@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q/R</title>
+</head>
+<body>
+    <h1>Questions/Reponses</h1>
+    <h2>1-Quelle est la différence entre cloner ou forker un projet (Avantages et inconvénients)</h2>
+    <p>1-Pour envoyer un fichier vers un dépôt distant dans Git, vous devez effectuer deux étapes principales :
+
+        1. *Ajouter les modifications au suivi de Git* :
+           - Utilisez la commande git add pour ajouter les modifications de votre fichier à l'index (zone de préparation). Par exemple :
+             
+             git add nom_du_fichier
+             
+           - Cela prépare vos modifications pour le prochain commit.
+        
+        2. *Pousser les commits vers le dépôt distant* :
+           - Utilisez la commande git push pour envoyer vos commits (validations) vers le référentiel distant. Vous devez spécifier le nom du dépôt distant (par exemple, origin) et le nom de la branche (par exemple, main).
+             
+             git push nom_du_dépôt_distant nom_de_la_branche
+             
+           - Par exemple, si vous travaillez avec le dépôt distant "origin" et la branche "main", vous pouvez exécuter :
+             
+             git push origin main
+             
+        
+        Ces deux étapes vous permettront d'envoyer vos modifications vers le dépôt distant.</p>
+    <h2>2-Quelles sont les 2 commandes à exécuter sur un fichier dans un projet git avant de l’envoyer sur un dépôt distant ?</h2>
+    <p>2-Après avoir créé un projet Git en local, vous devez exécuter la commande git init pour initialiser un nouveau dépôt Git. Cela permettra à votre projet d'être reconnu comme un projet Git et de commencer à suivre les modifications apportées à vos fichiers locaux. Voici comment vous pouvez le faire :
+
+        1. Ouvrez votre terminal (ou Git Bash si vous utilisez Windows).
+        2. Naviguez vers le répertoire de votre projet en utilisant la commande cd.
+        3. Exécutez la commande git init pour créer un nouveau dépôt Git dans ce répertoire.
+        
+        Une fois que vous avez effectué ces étapes, votre projet sera prêt à être suivi par Git, et vous pourrez commencer à ajouter des fichiers, valider des modifications et les pousser vers un dépôt distant si nécessaire.</p>
+    <h2>3-Quelle commande qu’on doit obligatoirement exécuter après avoir créé un projet git en local pour que ce projet soit reconnu en tant qu’un projet git ?</h2>
+    <p>3-Un fichier dans un projet Git peut être dans l'un des trois états suivants :
+
+            1. *Non suivi (untracked)* : Cela signifie que le fichier existe dans votre répertoire de travail, mais n'est pas encore suivi par Git. Vous pouvez ajouter un fichier non suivi au suivi Git en utilisant la commande git add.
+            
+            2. *Modifié (modified)* : Lorsque vous apportez des modifications à un fichier suivi, il passe à l'état modifié. Cela signifie que les modifications n'ont pas encore été validées (commitées) dans le dépôt Git. Vous pouvez valider ces modifications en utilisant la commande git commit.
+            
+            3. *Stagé (staged)* : Après avoir utilisé la commande git add pour ajouter des modifications à un fichier, il passe à l'état stagé. Cela signifie que les modifications sont prêtes à être validées lors du prochain commit.
+            
+            En résumé, les trois états d'un fichier dans un projet Git sont : non suivi, modifié et stagé</p>
+    <h2>4-Un fichier dans un projet git est connu dans combien état ? Citez-les.</h2>
+    <p>4-Pour créer une nouvelle branche dans votre projet Git, suivez ces étapes :
+
+            1. *Créez la branche* : Ouvrez votre terminal et naviguez vers le répertoire de votre projet. Ensuite, exécutez la commande suivante pour créer une nouvelle branche (remplacez <nom-de-branche> par le nom que vous souhaitez donner à votre branche) :
+            
+                bash
+                git checkout -b <nom-de-branche>
+                
+            
+                Cette commande créera une nouvelle branche et vous basculera automatiquement vers cette branche.
+            
+            2. *Ajoutez un fichier .txt* : Créez un fichier texte (par exemple, reponses.txt) dans votre répertoire de travail. Écrivez vos réponses aux questions dans ce fichier.
+            
+            3. *Ajoutez et validez vos modifications* : Utilisez les commandes suivantes pour ajouter le fichier .txt et valider vos modifications :
+            
+                bash
+                git add reponses.txt
+                git commit -m "Réponses aux questions"
+                
+            
+            4. *Poussez la branche vers le dépôt distant* : Pour envoyer la nouvelle branche vers le dépôt distant (sans la fusionner avec la branche principale), utilisez la commande suivante :
+            
+                bash
+                git push origin <nom-de-branche>
+                
+            
+                Remplacez <nom-de-branche> par le nom de la branche que vous avez créée. Cela enverra la branche vers le dépôt distant sans fusionner avec la branche principale.
+            
+            Et voilà ! Vous avez maintenant une nouvelle branche avec vos réponses aux questions dans le fichier .txt, prête à être partagée avec d'autres collaborateurs.</p>
+    <h2>5-Un fichier dans un projet git est connu dans combien état ? Citez-les.</h2>
+    <p>5-Pour créer une nouvelle branche dans votre projet Git, suivez ces étapes :
+
+            1. *Créez la branche* : Ouvrez votre terminal et naviguez vers le répertoire de votre projet. Ensuite, exécutez la commande suivante pour créer une nouvelle branche (remplacez <nom-de-branche> par le nom que vous souhaitez donner à votre branche) :
+            
+                bash
+                git checkout -b <nom-de-branche>
+                
+            
+                Cette commande créera une nouvelle branche et vous basculera automatiquement vers cette branche.
+            
+            2. *Ajoutez un fichier .txt* : Créez un fichier texte (par exemple, reponses.txt) dans votre répertoire de travail. Écrivez vos réponses aux questions dans ce fichier.
+            
+            3. *Ajoutez et validez vos modifications* : Utilisez les commandes suivantes pour ajouter le fichier .txt et valider vos modifications :
+            
+                bash
+                git add reponses.txt
+                git commit -m "Réponses aux questions"
+                
+            
+            4. *Poussez la branche vers le dépôt distant* : Pour envoyer la nouvelle branche vers le dépôt distant (sans la fusionner avec la branche principale), utilisez la commande suivante :
+            
+                bash
+                git push origin <nom-de-branche>
+                
+            
+                Remplacez <nom-de-branche> par le nom de la branche que vous avez créée. Cela enverra la branche vers le dépôt distant sans fusionner avec la branche principale.
+            
+            Et voilà ! Vous avez maintenant une nouvelle branche avec vos réponses aux questions dans le fichier .txt, prête à être partagée avec d'autres collaborateurs.</p>            
+</body>
+</html>
